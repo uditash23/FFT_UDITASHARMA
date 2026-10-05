@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- <h1 id ="head">DOM</H1>
+        <button onclick="btn()"> change</button> -->
+        <form>
+            <h1>Login Form</h1>
+            <label>Username:</label>
+            <input type="text"name="uname" id="v1"><br><br>
+            <label>Passwod:</label>
+             <input type="password" name="upwd" id="v2"><br><br>
+             <button onclick="login() "type="button">LOGIN</button>
+             <p id="result"></p>
+
+        </form>
+        <script>
+            // // function btn(){
+            // //     //   alert("Hello! Udita");
+            // //     document.getElementById('head').innerHTML="Hello Udita!!!"
+            // }
+            function login(){
+            let uname = document.getElementById('v1').value;
+            let upwd = document.getElementById('v2').value;
+            document.getElementById('result').innerHTML="Login Successful!!"
+            
+            if(uname== "udita" && upwd==123){
+                document.getElementById('result').innerHTML="Login Successfully!";
+                result.style.color = "green";
+
+            } 
+            else{
+                document.getElementById('result').innerHTML="Login Failed?";
+                  result.style.color = "red";
+            }
+            }
+        
+        </script>
+</body>
+</html>
