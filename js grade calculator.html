@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive student result Dashboard </title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 30px;
+            background-color: white;
+            background: url("repo.jpeg"); 
+            /* background:"edu.webp";
+        } */
+
+        h1 {
+            color: black;
+            text-align: center;
+        }
+
+        form {
+            width: 500px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px black;
+        }
+        input{
+            padding: 8px;
+            width: 200px;
+            border: 1px solid gray;
+            border-radius: 4px;
+        }
+
+        label {
+            display: inline-block;
+            width: 180px;
+            border: 1px solid gray;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 25px;
+            margin-top: 10px;
+            background-color: rgb(223, 43, 145);
+            color: darkgray;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: rgb(5, 102, 119);
+            color: white;
+        }
+        #para {
+            margin: top 20px;
+            padding: 20px;
+            background-color: white;
+            border-left:4px solid rgb(95, 255, 95);
+            animation: fade 1s ease;
+        }
+
+        #para h1 {
+            text-align:left;
+            font-size: 20px;
+        }
+
+        @keyframes slide{
+            from{
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fade{
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <h1>Interactive Student Result Dashboard</h1>
+    <form>
+        <label>Student Name:</label>
+        <input type="text" name="n1" id="i1"><br><br>
+        <label>Student Reg:</label>
+        <input type="number" name="n2" id="i2"><br><br>
+        <label> HTML Marks:</label>
+        <input type="number" name="n3" id="i3"><br><br>
+        <label>CSS Marks:</label>
+        <input type="number" name="n4" id="i4"><br><br>
+        <label>JS Marks:</label>
+        <input type="number" name="n5" id="i5"><br><br>
+        <button type="button" onclick="Check()">RESULT</button>
+        <p id="para"></p>
+    </form>
+    <!-- java script -->
+    <script>
+        function Check() {
+            let n1 = document.getElementById("i1").value;
+            let n2 = document.getElementById("i2").value;
+            let n3 = Number(document.getElementById("i3").value);
+            let n4 = Number(document.getElementById("i4").value);
+            let n5 = Number(document.getElementById("i5").value);
+            let total = n3 + n4 + n5;
+            let avg = total / 3;
+            let percentage = (total / 300) * 100;
+            let grade;
+            if (avg >= 80) {
+                grade = "A";
+
+            } else if (avg >= 60) {
+                grade = "B";
+            } else if (avg >= 40) {
+                grade = "c";
+            } else {
+                grade = "absent";
+            }
+            let status;
+            if (avg >= 40) {
+                status = "Pass";
+            } else {
+                status = "Fail";
+            }
+            document.getElementById('para').innerHTML =
+                "<h1>student details</h1>" + "<br>" +
+                "Student Name:" + n1 + "<br>" +
+                "Student Reg:" + n2 + "<br>" +
+                "HTML Marks:" + n3 + "<br>" +
+                "CSS Marks:" + n4 + "<br>" +
+                "JS Marks:" + n5 + "<br>" +
+                "TOTAL Marks:" + total + "<br>" +
+                "Avg Marks:" + avg + "<br>" +
+                "Percentage:" + percentage + "<br>" +
+                "Grade:" + grade + "<br>" +
+                "Status:" + status;
+
+        }
+    </script>
+
+</body>
+
+</html>
