@@ -1,0 +1,126 @@
+<html>
+
+<head>
+    <title>Transition & Animation</title>
+    <style>
+        .container {
+            width: 600px;
+            min-height: 600px;
+            border: 5px solid rgb(203, 22, 22);
+            border-radius: 15px;
+            padding: 20px;
+            margin: auto;
+            background: rgb(245, 245, 245);
+            text-align: center;
+        }
+
+        button {
+            margin: 20px;
+            height: 50px;
+            width: 50px;
+            background: rgb(92, 27, 197);
+            border: none;
+            border-radius: 15px;
+            transition: 1s;
+        }
+
+        button:hover {
+            background: rgb(11, 234, 11);
+            transform: scale(1.5);
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: rgb(169, 169, 247);
+            animation: sheru 5s ease alternate infinite;
+            margin: 20px auto;
+        }
+
+        .load {
+            width: 100px;
+            height: 100px;
+            border: 5px solid rgb(225, 18, 122);
+            border-radius: 50%;
+            border-top: 5px solid rgb(17, 17, 171);
+            animation: Aditi 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        .gg {
+            width: 0px;
+            height: 0px;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid rgb(228, 163, 163);
+            animation: okk 2s linear infinite alternate;
+            margin: 20px auto;
+        }
+
+        .react {
+            width: 300px;
+            height: 100px;
+            border: 5px solid rgb(247, 162, 247);
+            border-radius: 50%;
+            border-top: 5px solid rgb(241, 241, 161);
+            animation: reac 0.5s linear infinite;
+            margin: 20px auto;
+        }
+
+        .slide {
+            width: 100px;
+            height: 100px;
+            background: rgb(160, 244, 160);
+            animation: slide 2s ease infinite alternate;
+            margin: 20px auto;
+        }
+
+        @keyframes slide {
+            to {
+                transform: translateX(300px);
+            }
+        }
+
+        @keyframes reac {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes okk {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes Aditi {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes sheru {
+            from {
+                transform: scale(3);
+            }
+
+            to {
+                transform: scale(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Transition & Animation</h1>
+        <button>Action</button><br><br>
+        <div class="box"></div>
+        <div class="load"></div>
+        <div class="gg"></div>
+        <div class="react"></div>
+        <div class="slide"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<html>
+
+<head>
+    <title>Shapes Animation</title>
+    <style>
+        .container {
+            width: 100px;
+            height: 100px;
+            border: 5px solid gray;
+            border-radius: 15px;
+            padding:20px;
+            margin:auto;
+            background-color: rgb(38, 255, 0);
+            text-align: center;
+        
+        }
+        .rectangle {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* animation property shortcut="animation=" 
+                animation-name:udita;
+                animation-delay:1s;
+                animation-timing-function:ease;
+                animation-duration:2s;
+                animation-iteration-count:infinite;*/
+            animation: udita 1s ease 1s infinite;
+        }
+
+        @keyframes udita {
+            to {
+                transform: scale(0);
+            }
+
+            from {
+                transform: translate(300px);
+            }
+        }
+
+        .udd {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            animation: akash 1s ease alternate infinite;
+
+        }
+
+        @keyframes akash {
+            to {
+                transform: scale(0);
+            }
+
+            from {
+                transform: scale(300px)
+            }
+        }
+
+        .udii {
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+            animation: aaru 1s ease alternate infinite;
+        }
+
+        @keyframes aaru {
+            to {
+                transform: translate(0);
+            }
+
+            from {
+                transform: translate(300px);
+            }
+        }
+
+        .rzm {
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            animation: rzm 1s ease alternate infinite;
+        }
+
+        @keyframes rzm {
+            to {
+                transform: matrix(0);
+            }
+
+            from {
+                transform: rotate(360deg);
+            }
+        }
+
+        .roted {
+            width: 100px;
+            height: 100px;
+            border: 5px solid gray;
+            border-radius: 50%;
+            border-top: 5px solid red;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .lode {
+            width: 300px;
+            height: 100px;
+            border: 5px solid gray;
+            border-radius: 50%;
+            border-top: 5px solid rgb(38, 255, 0);
+            animation: rod 0.5ms linear infinite;
+        }
+
+        @keyframes rod {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .squ{
+            width: 100px;
+            height: 100px;
+            border: 5px solid gray;
+            border-radius: 0;
+            border-top: 5px solid rgb(38, 255, 0);
+            animation: mqu 0.5ms linear infinite;
+
+        }
+        @keyframes mqu{
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+<body>
+    <h1>Shapes Animation</h1>
+    <div class="rectangle"></div>
+    <br>
+    <br>
+    <div class="udd"></div>
+    <br>
+    <div class="udii"></div>
+    <br>
+    <div class="rzm"></div>
+    <br>
+    <br>
+    <br>
+    <div class="roted"></div>
+    <br>
+    <br>
+    <br>
+    <div class="lode"></div>
+    <br>
+    <br>
+    <br>
+    <div class="squ"></div>
+</body>
+</head>
+
+</html>
